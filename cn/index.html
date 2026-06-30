@@ -134,8 +134,8 @@
     .moments-track{display:flex; gap:18px; transition:transform .6s cubic-bezier(.22,.61,.36,1); will-change:transform;}
     .moment-slide{flex:0 0 calc((100% - 36px) / 3); min-width:0;}
     .moment-card{position:relative; overflow:hidden; border:1px solid rgba(199,167,102,.13); background:#111; box-shadow:0 22px 50px rgba(0,0,0,.28); aspect-ratio:4/5;}
-    .moment-card img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(.58) saturate(.42) brightness(.64) contrast(1.02); transition:.8s ease;}
-    .moment-card:hover img{transform:scale(1.03); filter:grayscale(.38) saturate(.62) brightness(.76) contrast(1.04);}
+    .moment-card img{width:100%; height:100%; object-fit:cover; display:block; filter:none; transition:.8s ease;}
+    .moment-card:hover img{transform:scale(1.03); filter:none;}
     .moment-card:before{display:none;}
     .moment-meta{position:absolute; left:18px; right:18px; bottom:16px; z-index:2;}
     .moment-tag{font:400 10px/1.2 Georgia,serif; letter-spacing:.18em; text-transform:uppercase; color:rgba(243,234,217,.58); margin-bottom:8px;}
@@ -151,10 +151,10 @@
     .experience{background:linear-gradient(180deg,#050504 0%,#0d0b08 100%)}
     .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; border:1px solid rgba(199,167,102,.18); background:rgba(199,167,102,.16); margin-top:52px;}
     .card{position:relative; min-height:360px; overflow:hidden; background:#080706; padding:28px; display:flex; flex-direction:column; justify-content:flex-end;}
-    .card img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.48; filter:saturate(.75) brightness(.72); transition:.8s ease;}
-    .card:hover img{opacity:.68; transform:scale(1.06)}
-    .card:before{content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.78) 75%); z-index:1;}
-    .card-content{position:relative; z-index:2;}
+    .card img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; filter:none; transition:.8s ease;}
+    .card:hover img{opacity:1; transform:scale(1.06)}
+    .card:before{display:none;}
+    .card-content{position:relative; z-index:2; text-shadow:0 2px 12px rgba(0,0,0,.72);}
     .card-num{font:400 12px/1 Georgia,serif; color:var(--gold); letter-spacing:.18em; margin-bottom:22px;}
     .card h3{font:400 28px/1.05 Georgia,serif; margin:0 0 14px; letter-spacing:-.035em;}
     .card p{margin:0; color:rgba(243,234,217,.72); line-height:1.75; font-size:13.5px;}
@@ -576,7 +576,7 @@
       </div>
       <div class="cards reveal show">
         <article class="card"><img loading="lazy" decoding="async" src="../Roosevelt Shanghai · English_files/image_13.webp" alt="罗斯福公馆"><div class="card-content"><div class="card-num">01 · 罗斯福公馆</div><h3>罗斯福之名与外滩建筑传奇交汇之地</h3></div></article>
-        <article class="card"><img loading="lazy" decoding="async" src="../Roosevelt Shanghai · English_files/image_14.webp" alt="色戒酒吧"><div class="card-content"><div class="card-num">02 · 色戒酒吧</div><h3>于云端之上举杯，俯瞰城市流光</h3></div></article>
+        <article class="card"><img loading="lazy" decoding="async" src="../Roosevelt Shanghai · English_files/image_14.webp" alt="天际酒吧"><div class="card-content"><div class="card-num">02 · 天际酒吧</div><h3>于云端之上举杯，俯瞰城市流光</h3></div></article>
         <article class="card"><img loading="lazy" decoding="async" src="../Roosevelt Shanghai · English_files/image_15.webp" alt="酒廊"><div class="card-content"><div class="card-num">03 · 酒廊</div><h3>让时间慢下来，让交流更从容</h3></div></article>
         <article class="card"><img loading="lazy" decoding="async" src="../Roosevelt Shanghai · English_files/image_16.webp" alt="雪茄吧"><div class="card-content"><div class="card-num">04 · 雪茄吧</div><h3>雪茄、私密与沉淀后的格调</h3></div></article>
         <article class="card"><img loading="lazy" decoding="async" src="../Roosevelt Shanghai · English_files/image_17.webp" alt="酒窖"><div class="card-content"><div class="card-num">05 · 酒窖</div><h3>收藏岁月与佳酿的空间</h3></div></article>
@@ -616,14 +616,14 @@
           <div>
             <div class="award-year">2025</div>
             <div class="award-title">中国年度酒单大奖</div>
-            <div class="award-sub">年度获奖酒吧｜罗斯福色戒酒吧</div>
+            <div class="award-sub">年度获奖酒吧｜罗斯福天际酒吧</div>
           </div>
         </div>
         <div class="award-card">
           <div>
             <div class="award-year">2024</div>
             <div class="award-title">That's Food &amp; Drink Awards</div>
-            <div class="award-sub">年度最佳屋顶酒吧｜罗斯福色戒酒吧</div>
+            <div class="award-sub">年度最佳屋顶酒吧｜罗斯福天际酒吧</div>
           </div>
         </div>
         <div class="award-card">
@@ -647,13 +647,6 @@
             <div class="award-sub">罗斯福公馆</div>
           </div>
         </div>
-        <div class="award-card">
-          <div>
-            <div class="award-year">Hurun Report</div>
-            <div class="award-title">最佳私人俱乐部</div>
-            <div class="award-sub">罗斯福公馆</div>
-          </div>
-        </div>        
         <div class="award-card">
           <div>
             <div class="award-year">Wine Spectator</div>
